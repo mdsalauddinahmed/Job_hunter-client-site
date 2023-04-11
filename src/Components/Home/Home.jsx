@@ -1,10 +1,12 @@
 import React from 'react';
+import Cover from './Cover';
+ 
+ 
+  
 
 const Home = () => {
     return (
-        <div>
-            <h1>this is home page </h1>
-        </div>
+       <Cover></Cover>
     );
 };
 
