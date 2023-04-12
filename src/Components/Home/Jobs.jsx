@@ -1,10 +1,11 @@
 import React from 'react';
 import Location from '../../../assets/Icons/Location.png'
 import Frame from '../../../assets/Icons/Frame.png'
+import { Link } from 'react-router-dom';
 
 const Jobs = ({job}) => {
     console.log(job)
-    const {companyLogo,companyName,jobTitle,fulltimeOrPartTime,salary,remoteOrOnsite,location
+    const {companyLogo,companyName,jobTitle,fulltimeOrPartTime,salary,remoteOrOnsite,location,id
 
     }=job
     return (
@@ -21,7 +22,7 @@ const Jobs = ({job}) => {
                 <button className='py-2 m-2 px-4 border-2'>{fulltimeOrPartTime}</button>
              </div> 
             
-          <button className='btn-primary'>View Details</button>
+        <Link to={`../${id}`}><button  className='btn-primary'>View Details</button></Link>
         
         </div>
     );
