@@ -28,8 +28,16 @@ const Home = () => {
         {
             jobs.map(job=><Jobs job={job}></Jobs>)
         }
+
+
        </div>
+       <div className='w-[20%] mx-auto my-16'>
+       <button className='btn-primary '>Show All</button>
+       </div>
+       
       </div>
+
+      
        </>
     );
 };

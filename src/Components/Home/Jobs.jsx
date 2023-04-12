@@ -1,4 +1,6 @@
 import React from 'react';
+import Location from '../../../assets/Icons/Location.png'
+import Frame from '../../../assets/Icons/Frame.png'
 
 const Jobs = ({job}) => {
     console.log(job)
@@ -6,13 +8,13 @@ const Jobs = ({job}) => {
 
     }=job
     return (
-        <div className='border-2 mt-10 p-12'>
+        <div className='border-2 mt-10 p-6'>
             <img className='w-36' src={companyLogo} alt="" />
             <h2 className='text-2xl font-semibold'>{job.jobTitle}</h2>
             <p>{companyName}</p>
-          <div className='flex gap-4'>
-          <p>location:{location}</p>
-          <p>Salary:{salary}</p>
+          <div className='flex gap-4 my-4'>
+             <img src={Location} alt="" /><span>location: {location};</span> 
+          <img src={Frame} alt="" /><span>Salary:{salary}</span>
           </div>
              <div className='ms-0 py-4'>
                 <button className='py-2 m-2 px-4 border-2'>{remoteOrOnsite}</button>
