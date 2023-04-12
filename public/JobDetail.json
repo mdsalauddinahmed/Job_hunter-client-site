@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "companyLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png",
+        "jobTitle": "Software Engineer",
+        "companyName": "Company 1",
+        "remoteOrOnsite": "Remote",
+        "location": "Anywhere",
+        "fulltimeOrPartTime": "Full-time",
+        "salary": "100,000-120,000 USD",
+        "jobDescription": "We are seeking a skilled software engineer to join our team...",
+        "jobResponsibility": "Design, develop, test, and maintain software applications...",
+        "educationalRequirements": "Bachelor's degree in computer science or related field...",
+        "experiences": "3+ years of experience in software development...",
+       
+          "phone": "555-555-5555",
+          "email": "jobs@company1.com"
+      },
+        {
+          "id": 2,
+          "companyLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdtR2QSJ04sZUyY48kx7UANrs9-bctUFa_sA&usqp=CAU",
+          "jobTitle": "Marketing Manager",
+          "companyName": "Company 2",
+          "remoteOrOnsite": "Onsite",
+          "location": "New York, NY",
+          "fulltimeOrPartTime": "Full-time",
+          "salary": "80,000-100,000 USD",
+          "jobDescription": "We are seeking an experienced marketing manager to lead our team...",
+          "jobResponsibility": "Develop and execute marketing campaigns...",
+          "educationalRequirements": "Bachelor's degree in marketing or related field...",
+          "experiences": "5+ years of experience in marketing...",
+          
+            "phone": "555-555-5555",
+            "email": "jobs@company2.com"
+          
+        },
+        {
+          "id": 3,
+          "companyLogo": "https://static.vecteezy.com/system/resources/previews/019/550/793/non_2x/tesla-logo-free-download-free-vector.jpg",
+          "jobTitle": "Graphic Designer",
+          "companyName": "Company 3",
+          "remoteOrOnsite": "Remote",
+          "location": "Anywhere",
+          "fulltimeOrPartTime": "Part-time",
+          "salary": "30-40 USD per hour",
+          "jobDescription": "We are seeking a talented graphic designer to join our team...",
+          "jobResponsibility": "Create designs for various marketing materials...",
+          "educationalRequirements": "Associate's or Bachelor's degree in graphic design...",
+          "experiences": "2+ years of experience in graphic design...",
+          
+            "phone": "555-555-5555",
+            "email": "jobs@company3.com"
+        
+        },
+    {
+      "id": 4,
+      "companyLogo": "https://m.media-amazon.com/images/G/31/social_share/amazon_logo._CB633266945_.png ",
+      "jobTitle": "Product Manager",
+      "companyName": "Company 4",
+      "remoteOrOnsite": "Onsite",
+      "location": "San Francisco, CA",
+      "fulltimeOrPartTime": "Full-time",
+      "salary": "120,000-150,000 USD",
+      "jobDescription": "We are seeking an experienced product manager to lead our team...",
+      "jobResponsibility": "Develop and manage product roadmap...",
+      "educationalRequirements": "Bachelor's degree in computer science or related field...",
+      "experiences": "7+ years of experience in product management...",
+      
+        "phone": "555-555-5555",
+        "email": "jobs@company4.com"
+      }
+]

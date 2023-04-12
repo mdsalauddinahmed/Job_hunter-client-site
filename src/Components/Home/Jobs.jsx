@@ -1,0 +1,28 @@
+import React from 'react';
+
+const Jobs = ({job}) => {
+    console.log(job)
+    const {companyLogo,companyName,jobTitle,fulltimeOrPartTime,salary,remoteOrOnsite,location
+
+    }=job
+    return (
+        <div className='border-2 mt-10 p-12'>
+            <img className='w-36' src={companyLogo} alt="" />
+            <h2 className='text-2xl font-semibold'>{job.jobTitle}</h2>
+            <p>{companyName}</p>
+          <div className='flex gap-4'>
+          <p>location:{location}</p>
+          <p>Salary:{salary}</p>
+          </div>
+             <div className='ms-0 py-4'>
+                <button className='py-2 m-2 px-4 border-2'>{remoteOrOnsite}</button>
+                <button className='py-2 m-2 px-4 border-2'>{fulltimeOrPartTime}</button>
+             </div> 
+            
+          <button className='btn-primary'>View Details</button>
+        
+        </div>
+    );
+};
+
+export default Jobs;

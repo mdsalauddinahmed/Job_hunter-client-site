@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Category = ({cate}) => {
-    console.log(cate)
+   
     const {logo,name,jobsAvailable}=cate;
     return (
         <div className='p-16 bg-slate-200 rounded'>

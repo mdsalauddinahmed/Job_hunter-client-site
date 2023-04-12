@@ -3,8 +3,8 @@ import { Link, NavLink } from 'react-router-dom'
 
 const Header = () => {
     return (
-        <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full bg-black  md:px-24 lg:px-8'>
-        <div className='relative flex items-center justify-between lg:mx-20  '>
+        <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full bg-gray  md:px-24 lg:px-8'>
+        <div className='relative flex items-center justify-between lg:mx-20     '>
           <Link
             to='/'
             aria-label='HeroGadget'
@@ -12,7 +12,7 @@ const Header = () => {
             className='inline-flex items-center'
           >
              
-            <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 '>
+            <span className='ml-2 text-4xl font-bold tracking-wide text-gray-800 '>
               Job_Hunter
             </span>
           </Link>
