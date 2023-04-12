@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import {  useLoaderData, useParams } from 'react-router-dom';
+import { addToDb } from '../../../utilities/fakedb';
 
 const JobDetails = () => {
     
@@ -13,9 +14,15 @@ const JobDetails = () => {
 
          setValue(SingleJob)
     },[])
- console.log(value)
+  console.log(value)
+  const addAppliedJob=(id)=>{
+       addToDb(value.id)
 
-    const {experiences,educationalRequirements,fulltimeOrPartTime,jobDescription,jobResponsibility,jobTitle,salary,phone,location,email}=value
+
+  }
+
+
+    const {experiences, educationalRequirements,fulltimeOrPartTime,jobDescription,jobResponsibility,jobTitle,salary,phone,location,email}=value
 
 
 
@@ -41,12 +48,15 @@ const JobDetails = () => {
                     <span>Job Title:{jobTitle}</span> 
                     <hr />
                     <h1>Contact Information:</h1>
+                    <hr />
                      <span>{phone}</span> <br />
                      <span>{email}</span>
                      <span>{location}</span>
                       <br />
                   </div>
-                  <button className='btn-primary w-full'>Apply now</button>
+                  
+                 <button onClick={()=>addAppliedJob(id)} className='btn-primary w-full'>Apply now</button>
+                
              </div>
 
 
