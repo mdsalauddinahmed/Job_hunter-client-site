@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import {  useLoaderData, useParams } from 'react-router-dom';
-import { addToDb } from '../../../utilities/fakedb';
+import {  useLoaderData, useParams  } from 'react-router-dom';
+ 
 
 const JobDetails = () => {
     
-    const [value,setValue]=useState({});
-    const id =useParams();
-    console.log(id)
-    const allJob= useLoaderData();
-    console.log(allJob)
-    useEffect(()=>{
-        const SingleJob = allJob.find(pd=>pd.id ==id.id)
-
-         setValue(SingleJob)
-    },[])
-  console.log(value)
-  const addAppliedJob=(id)=>{
-       addToDb(value.id)
-
+     const allJob=useLoaderData()
+     const[value,setValue]=useState({})
+     const id =useParams();
+     useEffect(()=>{
+        const jobs=allJob.find(job=>job.id == id.id)
+        setValue(jobs)
+     },[])
+   console.log(value)
+   const {jobDescription,jobResponsibility,experiences,educationalRequirements,salary,jobTitle,phone,email,location}=value
+   
+  const handleOrder = () => {
+    const storedData = JSON.parse(localStorage.getItem("orders"));
+    if(storedData){
+        localStorage.setItem("orders",JSON.stringify([...storedData,value]))
+    }else{
+        localStorage.setItem("orders",JSON.stringify([value]))
+    }
 
   }
-
-
-    const {experiences, educationalRequirements,fulltimeOrPartTime,jobDescription,jobResponsibility,jobTitle,salary,phone,location,email}=value
 
 
 
@@ -55,7 +55,7 @@ const JobDetails = () => {
                       <br />
                   </div>
                   
-                 <button onClick={()=>addAppliedJob(id)} className='btn-primary w-full'>Apply now</button>
+                 <button onClick={handleOrder} className='btn-primary w-full'>Apply now</button>
                 
              </div>
 

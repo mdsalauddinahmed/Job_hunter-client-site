@@ -1,29 +1,35 @@
-import React from 'react';
-import { getShoppingCart } from '../../utilities/fakedb';
-import { useLoaderData } from 'react-router-dom';
-
-const AppliedJob = () => {
-   
-    const pData= useLoaderData()
-    console.log(pData)
-
-    const cart= getShoppingCart()
-    console.log(cart)
-    let saveCart=[]
-
-    for(const id in cart){
-          const foundJob = pData.find(job =>job.id ===id)
-          if(foundJob){
-            saveCart.push(foundJob)
+ import React, { useEffect, useState } from 'react';
+ 
+import Jobs from './Jobs';
+import AppliedJobCart from './AppliedJobCart';
+ 
+ const AppliedJob = () => {
+     
+    
+        const [orders, setOrders] = useState([]);
+        const [filterOrder, setFilterOrder] = useState([]);
+      
+        useEffect(() => {
+          const storedData = JSON.parse(localStorage.getItem("orders"));
+          if (storedData) {
+            setOrders(storedData);
+            setFilterOrder(storedData);
           }
-    }
-     console.log(saveCart)
+        }, []);
+        console.log(orders)
+        console.log(filterOrder)
+
+
     return (
         <div>
-             <h2>orders:{cart.length}</h2>
+            <h1>hello world</h1>
+         <h1>{filterOrder.length}</h1>
+            
+     {
+        filterOrder?.map(product => <AppliedJobCart product={product}></AppliedJobCart>
+      )} 
         </div>
     );
-    
-};
-
-export default AppliedJob;
+ };
+ 
+ export default AppliedJob;

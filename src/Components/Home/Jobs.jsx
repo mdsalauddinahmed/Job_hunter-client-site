@@ -3,11 +3,12 @@ import Location from '../../../assets/Icons/Location.png'
 import Frame from '../../../assets/Icons/Frame.png'
 import { Link } from 'react-router-dom';
 
-const Jobs = ({job}) => {
-    console.log(job)
+const Jobs = ( {job}) => {
+     
     const {companyLogo,companyName,jobTitle,fulltimeOrPartTime,salary,remoteOrOnsite,location,id
-
-    }=job
+       
+    }= job
+    // console.log(props.product)
     return (
         <div className='border-2 mt-10 p-6'>
             <img className='w-36' src={companyLogo} alt="" />
