@@ -8,6 +8,7 @@ import Statistics from './Components/Home/Statistics'
 import AppliedJob from './Components/Home/AppliedJob'
 import Blog from './Components/Home/Blog'
 import JobDetails from './Components/Home/JobDetails/JobDetails'
+import ErrorPage from './Components/ErrorPage'
 const router=createBrowserRouter([
   {
      path:'/',
@@ -16,6 +17,7 @@ const router=createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>,
+        errorElement:<ErrorPage></ErrorPage>,
         loader:()=>fetch(`JobDetail.json`)
          
       },
@@ -38,7 +40,11 @@ const router=createBrowserRouter([
         element:<Blog></Blog>
       },
      ]
-    } 
+    } ,
+    {
+      path:"*",
+      element:<ErrorPage></ErrorPage>
+    }
   ])
 ReactDOM.createRoot(document.getElementById('root')).render(
  
