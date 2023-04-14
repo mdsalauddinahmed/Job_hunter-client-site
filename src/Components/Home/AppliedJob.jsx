@@ -16,8 +16,13 @@ import AppliedJobCart from './AppliedJobCart';
             setFilterOrder(storedData);
           }
         }, []);
-        console.log(orders)
-        console.log(filterOrder)
+        
+
+        const handleFilter = (event) => {
+          const value = event.target.value;
+          const filterData = orders.filter((item) => item.remoteOrOnsite == value );
+          setFilterOrder(filterData)
+        }
 
 
     return (
@@ -26,12 +31,30 @@ import AppliedJobCart from './AppliedJobCart';
           <h1 className='text-5xl'> Applied Jobs</h1>
          <h1 className='my-3'>Number of Applied Job: {filterOrder.length}</h1>
           </div>
+
+
+          <div className="my-3">
+      <div className='w-1/2 mx-auto'>
+    <button>
+    <label htmlFor="">sorted by: </label>
+        <select onChange={handleFilter} className="select select-bordered max-w-xl  ">
+          <option disabled selected></option>
+          <option value="Remote">Remote</option>
+          <option value="onsite">Onsite</option>
+        </select>
+    </button>
+      </div>
+      </div>
             
      <div className=''>
 
-     {
-        filterOrder?.map(product => <AppliedJobCart product={product}></AppliedJobCart>
-      )} 
+     { filterOrder.length>0?( filterOrder?.map(product => <AppliedJobCart product={product}></AppliedJobCart>)
+       
+      ):(
+        <h1 className='text-3xl text-center'>No applied Job</h1>
+      )
+      
+      } 
 
      </div>
         </div>
