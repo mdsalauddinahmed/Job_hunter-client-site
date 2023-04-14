@@ -1,5 +1,5 @@
 import React from 'react';
-import man from '../../../assets/All Images/man.png'
+import man from '../../../public/assets/All Images/man.png'
 
 const Cover = () => {
     return (

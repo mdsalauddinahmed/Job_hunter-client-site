@@ -1,6 +1,6 @@
 import React from 'react';
-import Location from '../../../assets/Icons/Location.png'
-import Frame from '../../../assets/Icons/Frame.png'
+import Location from '../../../public/assets/Icons/Location.png'
+import Frame from '../../../public/assets/Icons/Frame.png'
 import { Link } from 'react-router-dom';
 
 const Jobs = ( {job}) => {

@@ -21,13 +21,19 @@ import AppliedJobCart from './AppliedJobCart';
 
 
     return (
-        <div>
-            <h1>hello world</h1>
-         <h1>{filterOrder.length}</h1>
+        <div className=''>
+          <div className='text-center py-10'>
+          <h1 className='text-5xl'> Applied Jobs</h1>
+         <h1 className='my-3'>Number of Applied Job: {filterOrder.length}</h1>
+          </div>
             
+     <div className=''>
+
      {
         filterOrder?.map(product => <AppliedJobCart product={product}></AppliedJobCart>
       )} 
+
+     </div>
         </div>
     );
  };
